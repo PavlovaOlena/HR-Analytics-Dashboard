@@ -22,6 +22,36 @@ Power BI dashboard file: https://drive.google.com/drive/u/2/my-drive?q=after:202
 4. Advanced DAX Calculations: 
 Developed custom DAX (Data Analysis Expressions) measures to enable deeper insights and precise calculations across metrics.
 
+<b>IsActive (Employee Status):</b>
+IsActive = IF('employee_data'[EmployeeStatus] = "Active", 1, 0)
+
+<b>Age:</b>
+Age = DATEDIFF(employee_data[BirthDate], TODAY(), YEAR)
+
+
+<b>TenureYears (Employee Tenure):</b>
+TenureYears =
+VAR EndDate =
+    IF(
+        ISBLANK('employee_data'[ExitDate]),
+        TODAY(),
+        'employee_data'[ExitDate]
+    )
+RETURN
+DATEDIFF('employee_data'[StartDate], EndDate, YEAR)
+
+<b>Average Satisfaction (%):</b>
+% AverageSatisfaction = AVERAGE(employee_engagement_survey_data[Satisfaction])/5
+
+<b>Calendar Table (continuous date list):</b>
+Calendar = CALENDAR(MIN('employee_engagement_survey_data'[Survey Date]), MAX('employee_engagement_survey_data'[Survey Date]))
+
+<b>Month-Year Label:</b>
+MonthYear = FORMAT('Calendar'[Date], "MMM-YYYY")
+
+<b>Month Start Date:</b>
+MonthStart = DATE(YEAR('Calendar'[Date]), MONTH('Calendar'[Date]), 1)
+
 5. Dashboard Creation: Combined all visuals and insights into a cohesive, interactive dashboard for HR analytics that answers the following <b>questions</b>:
    
 <b>What is the overall level of employee engagement and satisfaction?</b>
