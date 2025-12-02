@@ -3,7 +3,7 @@
 This project presents an interactive Power BI dashboard designed to analyze employee engagement, satisfaction, and work-life balance across different business units. The dashboard provides a clear overview of key HR metrics, helping management identify strengths, areas for improvement, and trends over time.
 
 🧩 File Format: 
-Power BI dashboard file: https://drive.google.com/drive/u/2/my-drive?q=after:2025-10-29%20parent:0AAI9aGyXx6TuUk9PVA
+Power BI dashboard file: https://drive.google.com/file/d/1axgYdaTLE4b4GibVpTQhbQ784-kCqzuI/view?usp=sharing 
 
 ⚙️ <b>Project Development Steps</b>
 
